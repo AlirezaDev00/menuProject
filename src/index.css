@@ -1,2 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --color-default : #F1F5F8;
+    --color-title : #102A42;
+    --color-main : #C59D5F;
+}
+
+@utility container {
+    width: 78.75rem;
+}

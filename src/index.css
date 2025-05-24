@@ -4,6 +4,7 @@
     --color-default : #F1F5F8;
     --color-title : #102A42;
     --color-main : #C59D5F;
+    --color-desc: #617D98;
 }
 
 @utility container {

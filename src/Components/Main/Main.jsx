@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import Product from "./Product/Product";
 
 function Main() {
   return (
-    <div>Main</div>
-  )
+    <main className="flex flex-wrap  gap-y-16">
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+      <Product></Product>
+    </main>
+  );
 }
 
-export default Main
+export default Main;

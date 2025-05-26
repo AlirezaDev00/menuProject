@@ -1,9 +1,11 @@
-import { Navigate } from "react-router-dom"
-import Main from "./Components/Main/Main"
+import { Navigate } from "react-router-dom";
+import Main from "./Components/Main/Main";
 
-const router = [
-    { path: "/menu/:category", element: <Main></Main> },
-    {path: "*" , element: <Navigate to="/menu/all"></Navigate>},
-]
+const router = (mainCompData) => {
+  return [
+    { path: "/menu/:category", element: <Main products={mainCompData}></Main> },
+    { path: "*", element: <Navigate to="/menu/all"></Navigate> },
+  ];
+};
 
-export default router
+export default router;

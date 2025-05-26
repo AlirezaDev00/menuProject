@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import Header from "./Components/Header/Header";
-// import Main from "./Components/Main/Main";
 import router from "./Routes";
 import { useRoutes } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState(null);
   const [categories, setCategories] = useState([]);
-  const routes = useRoutes(router)
+  const routes = useRoutes(router(products))
 
   useEffect(() => {
     const getData = async () => {
@@ -17,7 +16,7 @@ function App() {
         setProducts(data);
         const allCategories = data.map((product) => product.category);
         const categoriesSet = new Set(allCategories);
-        setCategories([...categoriesSet]);
+        setCategories(["all" , ...categoriesSet ]);
       } catch (err) {
         alert("an error : ", err);
       }
